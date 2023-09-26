@@ -1,6 +1,7 @@
 package br.com.tiagors09.cardview.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,9 +29,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPostagem = findViewById(R.id.recyclerViewPostagens);
 
         // Define layout manager
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(
-                getApplicationContext()
-        );
+        // LinearLayoutManager layoutManager = new LinearLayoutManager(
+        //        getApplicationContext()
+        // );
+        // layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
 
         this.recyclerViewPostagem.setLayoutManager(layoutManager);
 
